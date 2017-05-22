@@ -10141,29 +10141,6 @@ Responsive Util
   margin: auto;
   height: 100%;
 }
-
-.polygons {
-   fill: #00668C;
-   stroke: #004059;
-}
-
-.polygons :first-child {
-   fill: #0097D0;
-}
-.polygons :nth-child(3n){
-   fill: #006084;
-}
-.aa-cell-background:after {
-   content: '';
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-image: linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0)20%,rgba(0,0,0,0)80%,rgba(0,0,0,.5));
-   z-index: 0;
-   pointer-events: none;
-}
 /* Responsive handlers : Login
 ------------------------------------
 */
@@ -12909,6 +12886,78 @@ Main components
 }
 .previewer {
   height: 35px;
+}
+.builder .btn-refresh{
+  width: auto;
+  font-size:25px;
+  position: absolute;
+  top: 15px;
+  right: 100px;
+}
+.status-table{
+  font-size:12px;
+  table-layout:fixed;
+  margin: 15px 0 130px;
+}
+.status-table thead tr th{
+  font-weight: normal;
+  text-transform: none;
+  color: #000;
+  border: none;
+  padding: 5px 0 19px 23px;
+  vertical-align: middle;
+  white-space:nowrap;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  text-align: right;
+  transform-origin: 50% 50%;
+}
+.status-table thead tr th .th {
+  margin:0 -100% ;
+  display:inline-block;
+}
+.status-table thead tr th .th:before{
+  content:'';
+  width:0;
+  padding-top:110%;/* takes width as reference, + 10% for faking some extra padding */
+  display:inline-block;
+  vertical-align:middle;
+}
+.status-table tbody tr td{
+  border: none;
+  color: #000;
+  padding: 12px 0 4px 13px;
+  vertical-align: middle;
+}
+.status-table tbody tr td:first-child{
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 12px 5px 4px 2px;
+}
+.status-table .status-icon{
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+}
+.status-table .status-icon.status1{
+  background: #00b200;
+}
+.status-table .status-icon.status2{
+  background: #aff1ce;
+}
+.status-table .status-icon.status3{
+  background: #d72828;
+}
+.status-table .status-icon.status4{
+  background: #f1b4b4;
+}
+.status-table .status-icon.status5{
+  background: #ff0;
 }
 /* Demo Widths For GIF Animations 
 ------------------------------------
