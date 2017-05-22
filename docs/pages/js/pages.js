@@ -558,30 +558,33 @@ console.info('Data: ', svg);
      */
     Pages.prototype.initPivotTablePlugin = function() {
       var grida = null;
-      webix.ready(function(){
-        grida = webix.ui({
-          popup:{
-            width:800, height:600
-          },
-          container:"testA",
-          id:"pivot",
-          view:"pivot",
-          height:400,
-          width:1000,
-          totalColumn: true,
-          footer: true,
+      if(typeof webix != 'undefined'){
+        webix.ready(function(){
+          grida = webix.ui({
+            popup:{
+              width:800, height:600
+            },
+            container:"testA",
+            id:"pivot",
+            view:"pivot",
+            height:400,
+            width:1000,
+            totalColumn: true,
+            footer: true,
 
-          max: true,
-          structure: {
-            rows: ["form", "name"],
-            columns: ["year"],
-            values: [{ name:"oil", operation:["min","max","sum"]}],
-            filters:[]
-          }
+            max: true,
+            structure: {
+              rows: ["form", "name"],
+              columns: ["year"],
+              values: [{ name:"oil", operation:["min","max","sum"]}],
+              filters:[]
+            }
+          });
+          grida.$divider = "**";
+          grida.parse(pivot_dataset);
         });
-        grida.$divider = "**";
-        grida.parse(pivot_dataset);
-      });
+      }
+
 
     }
 
