@@ -1,0 +1,37 @@
+
+Check the full list of changes at http://docs.webix.com/pivot__whats_new.html
+
+Version 4.3 (April 2017)
+---------------------------
+
+- stableRowId property
+- ping property to abort long processes
+- stable performance of web worker
+
+
+Version 4.2 (February 2017)
+---------------------------
+
+- ability to offload work to a web worker
+- filterPlaceholder property to set placeholder for filters added
+- onFilterCreate event
+- "fields tree", datepicker, filter demos added
+
+Version 4.1 (November 2016)
+---------------------------
+
+- ability to define custom Filters
+- ability to override structure of Pivot
+- ability to process data on a server-side
+
+
+Version 3.4 (July 2016)
+-----------------------
+
+- addOperation API added
+
+
+Version 3.2 (February 2016)
+---------------------------
+
+- Performance improvements

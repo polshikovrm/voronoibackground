@@ -551,12 +551,46 @@ console.info('Data: ', svg);
     }
 
   }
+
+  /** @function initPivotTablePlugin
+     * @description Inintialize the pivot table plugin
+     * @requires webix.js, pivot.js
+     */
+    Pages.prototype.initPivotTablePlugin = function() {
+      var grida = null;
+      webix.ready(function(){
+        grida = webix.ui({
+          popup:{
+            width:800, height:600
+          },
+          container:"testA",
+          id:"pivot",
+          view:"pivot",
+          height:400,
+          width:1000,
+          totalColumn: true,
+          footer: true,
+
+          max: true,
+          structure: {
+            rows: ["form", "name"],
+            columns: ["year"],
+            values: [{ name:"oil", operation:["min","max","sum"]}],
+            filters:[]
+          }
+        });
+        grida.$divider = "**";
+        grida.parse(pivot_dataset);
+      });
+
+    }
+
     /** @function init
     * @description Inintialize all core components.
     */
     Pages.prototype.init = function() {
         // init layout
-        this.initBackgeroundVoronoi();
+
         this.initSidebar();
         this.initDropDown();
         this.initFormGroupDefault();
@@ -565,6 +599,8 @@ console.info('Data: ', svg);
         this.initProgressBars();
         this.initHorizontalMenu();
         // init plugins
+        this.initPivotTablePlugin();
+        this.initBackgeroundVoronoi();
         this.initTooltipPlugin();
         this.initSelect2Plugin();
         this.initScrollBarPlugin();
