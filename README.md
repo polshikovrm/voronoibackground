@@ -1,2 +1,2 @@
 # voronoibackground
-See example: https://polshikovrm.github.io/voronoibackground/
+Demo: https://polshikovrm.github.io/voronoibackground/
